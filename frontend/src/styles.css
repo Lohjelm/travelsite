@@ -1,0 +1,181 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure padding and borders don't affect layout */
+}
+
+/* General Styles for Hero Section */
+.hero-section {
+  position: relative;
+  background-image: url('beachhero.png');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  flex-direction: column; /* Stack heading and filter bar vertically */
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px; /* Space inside hero section */
+}
+
+.hero-heading {
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adding shadow for readability */
+}
+
+/* Filter Bar */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px; /* Limit width of the filter bar */
+}
+
+.filters label,
+.filters input,
+.filters button {
+  margin: 10px;
+}
+
+.filters label {
+  font-size: 16px;
+  color: white;
+}
+
+.filters input,
+.filters button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.filters input {
+  max-width: 200px; /* Limit input width */
+  flex-grow: 1; /* Allow inputs to grow but not stretch */
+}
+
+.filters button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 15px; /* Less padding for mobile */
+  }
+
+  .hero-heading {
+    font-size: 28px; /* Smaller heading for mobile */
+  }
+
+  .filters {
+    width: 100%; /* Make filter bar full width */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filters input,
+  .filters button {
+    width: 100%; /* Full width for inputs and button on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-heading {
+    font-size: 24px;
+  }
+
+  .filters input,
+  .filters button {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-heading {
+    font-size: 20px;
+  }
+
+  .filters input,
+  .filters button {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+/* Destination Cards */
+.destination-list {
+  padding: 40px;
+  text-align: center;
+}
+
+.destination-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.destination-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.destination-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.destination-card h2 {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.destination-card p {
+  padding: 0 20px;
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+}
+
+.destination-card p strong {
+  color: #f39c12;
+}
+
+/* Number of Persons Input */
+.num-persons {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.num-persons input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  width: 60px;
+}
